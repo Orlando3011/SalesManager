@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <title>addClient</title>
+</head>
+
+<body>
+<div th:insert="layout/header"></div>
+<div class="container-fluid">
+    <div class="panel panel-default">
+        <div class="panel-heading">Add new client</div>
+        <div class="panel-body">
+            <form class='needs-validation' action="addClient" method="post" novalidate>
+                <div class="col-sm-10">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" class="form-control" placeholder="John">
+                    <div class="invalid-feedback">Field should not be empty</div>
+                </div>
+                <div class="col-sm-10">
+                    <br /><label for="familyName">Family Name</label>
+                    <input type="text" id="familyName" name="familyName" class="form-control" placeholder="Bean">
+                    <div class="invalid-feedback">Field should not be empty</div>
+                </div>
+                <div class="col-sm-10">
+                    <br /><label for="address">Address</label>
+                    <input type="text" id="address" name="address" class="form-control" placeholder="Kielce, Sandomierska 50, Poland">
+                    <div class="invalid-feedback">Field should not be empty</div>
+                </div>
+                <div class="col-sm-10">
+                    <br /><label for="e-mail">E-Mail</label>
+                    <input type="text" id="e-mail" name="e-mail" class="form-control" placeholder="jbean50@gmail.com">
+                    <div class="invalid-feedback">Field should not be empty</div>
+                </div>
+                <div class="col-sm-10">
+                    <br /><button type="submit" class="btn btn-primary">Add client data</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</div>
+<div th:insert="layout/footer"></div>
+</body>
+</html>
