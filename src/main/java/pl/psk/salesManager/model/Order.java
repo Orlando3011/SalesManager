@@ -5,6 +5,7 @@ import org.springframework.data.annotation.CreatedDate;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class Order {
@@ -14,6 +15,8 @@ public class Order {
     @NotNull
     @ManyToOne
     private Client client;
+    @ManyToMany
+    private List<Product> products;
     @CreatedDate
     private Date created;
     private Integer invoiceNumber;

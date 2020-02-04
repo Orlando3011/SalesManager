@@ -19,23 +19,25 @@
             <th scope="col"> Family Name </th>
             <th scope="col"> Address </th>
             <th scope="col"> E-Mail </th>
+            <th scope="col"> Phone </th>
             <th scope="col"> Regular Customer </th>
             <th scope="col"> Edit </th>
             <th scope="col"> Remove </th>
         </tr>
         </thead>
         <tbody>
-        <tr th:if="${clients.empty}">
+        <tr th:if="${clientsList.empty}">
             <td colspan="2"> You do not have any clients data! </td>
         </tr>
-        <tr th:each="client : ${clients}">
+        <tr th:each="client : ${clientsList}">
             <td><span th:text="${client.id}"> ID </span></td>
             <td><span th:text="${client.firstName}"> First Name </span></td>
             <td><span th:text="${client.familyName}"> Family Name </span></td>
             <td><span th:text="${client.address}"> Address </span></td>
             <td><span th:text="${client.email}"> E-Mail </span></td>
+            <td><span th:text="${client.phone}"> Phone </span></td>
             <td><span th:text="${client.regularCustomer}"> Regular Customer </span></td>
-            <td><button type="button" class="btn btn-success">Edit</button></td>
+            <td><a class="nav-link" href="addClient">Edit<span class="sr-only">(current)</span></a></td>
             <td><button type="button" class="btn btn-danger">Remove</button></td>
         </tr>
         </tbody>

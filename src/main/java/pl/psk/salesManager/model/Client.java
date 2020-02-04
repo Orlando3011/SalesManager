@@ -19,8 +19,8 @@ public class Client {
     private String address;
     private String email;
     private String bankName;
-    private Long bankAccountNumber;
-    private Integer phone;
+    private String bankAccountNumber;
+    private String phone;
     private Boolean regularCustomer;
     @OneToMany(mappedBy = "client")
     private List<Order> orders;
@@ -69,11 +69,11 @@ public class Client {
         this.email = email;
     }
 
-    public Integer getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(Integer phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
@@ -109,15 +109,32 @@ public class Client {
         this.bankName = bankName;
     }
 
-    public Long getBankAccountNumber() {
+    public String getBankAccountNumber() {
         return bankAccountNumber;
     }
 
-    public void setBankAccountNumber(Long bankAccountNumber) {
+    public void setBankAccountNumber(String bankAccountNumber) {
         this.bankAccountNumber = bankAccountNumber;
     }
 
     public int countOrders() {
         return orders.size();
+    }
+
+    public void setClientDetails(String firstName,
+                                 String familyName,
+                                 String address,
+                                 String email,
+                                 String phone,
+                                 String bankName,
+                                 String bankAccountNumber) {
+        this.firstName = firstName;
+        this.familyName = familyName;
+        this.address = address;
+        this.email = email;
+        this.phone = phone;
+        this.bankName = bankName;
+        this. bankAccountNumber = bankAccountNumber;
+
     }
 }
