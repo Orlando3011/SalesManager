@@ -15,6 +15,7 @@ public class Product {
     private String name;
     @NotNull
     private Double price;
+    private String PKWiUSymbol;
     @NotNull
     private Integer inStock;
 
@@ -54,5 +55,13 @@ public class Product {
 
     public boolean isAvailable() {
         return inStock > 0;
+    }
+
+    public String getPKWiUSymbol() {
+        return PKWiUSymbol;
+    }
+
+    public void setPKWiUSymbol(String PKWiUSymbol) {
+        this.PKWiUSymbol = PKWiUSymbol;
     }
 }

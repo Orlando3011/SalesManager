@@ -1,7 +1,10 @@
 package pl.psk.salesManager.model;
 
+import org.springframework.data.annotation.CreatedDate;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.Date;
 
 @Entity
 public class Order {
@@ -11,6 +14,10 @@ public class Order {
     @NotNull
     @ManyToOne
     private Client client;
+    @CreatedDate
+    private Date created;
+    private Integer invoiceNumber;
+    private String paymentMethod;
 
     public Order() {}
 

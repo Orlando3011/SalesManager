@@ -18,6 +18,8 @@ public class Client {
     private String familyName;
     private String address;
     private String email;
+    private String bankName;
+    private Long bankAccountNumber;
     private Integer phone;
     private Boolean regularCustomer;
     @OneToMany(mappedBy = "client")
@@ -97,6 +99,22 @@ public class Client {
 
     public void setCreated(Date created) {
         this.created = created;
+    }
+
+    public String getBankName() {
+        return bankName;
+    }
+
+    public void setBankName(String bankName) {
+        this.bankName = bankName;
+    }
+
+    public Long getBankAccountNumber() {
+        return bankAccountNumber;
+    }
+
+    public void setBankAccountNumber(Long bankAccountNumber) {
+        this.bankAccountNumber = bankAccountNumber;
     }
 
     public int countOrders() {
