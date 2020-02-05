@@ -3,9 +3,8 @@ package pl.psk.salesManager.controller.client;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
+import pl.psk.salesManager.model.Client;
 import pl.psk.salesManager.service.ClientService;
 
 @Controller
@@ -16,25 +15,39 @@ public class ClientsController {
     @GetMapping("/clients")
     public String ShowClientsPage(Model model) {
         model.addAttribute("clientsList", clientService.findAllClients());
-        return "clients";
+        return "client/clientsList";
+    }
+
+    @GetMapping("/deleteClient/{id}")
+    public String deleteClient(Model model, @PathVariable(name = "id") int id){
+        clientService.removeClient(id);
+        model.addAttribute("clientsList", clientService.findAllClients());
+        return "redirect:/clients";
     }
 
     @GetMapping("/addClient")
-    public String ShowAddClientsPage() {
-        return "addClient";
+    public String ShowAddClientsPage(Model model) {
+        model.addAttribute(new Client());
+        return "client/addClient";
     }
 
     @PostMapping("/addClient")
-    public String addClient(Model model,
-                            @RequestParam String firstName,
-                            @RequestParam String familyName,
-                            @RequestParam String address,
-                            @RequestParam String email,
-                            @RequestParam String phone,
-                            @RequestParam String bankName,
-                            @RequestParam String bankAccountNumber) {
-        clientService.addClientToRepository(firstName, familyName, address, email, phone, bankName, bankAccountNumber);
+    public String addClient(@ModelAttribute Client client, Model model) {
+        clientService.addClientToRepository(client);
         model.addAttribute("clientsList", clientService.findAllClients());
-        return "clients";
+        return "redirect:/clients";
+    }
+
+    @GetMapping("/editClient/{id}")
+    public String ShowEditClientsPage(Model model, @PathVariable(name = "id") int id) {
+        model.addAttribute(clientService.findClient(id));
+        return "client/editClient";
+    }
+
+    @PostMapping("/editClient/{id}")
+    public String editClient(Model model, @ModelAttribute Client client) {
+        clientService.editClient(client);
+        model.addAttribute("clientsList", clientService.findAllClients());
+        return "redirect:/clients";
     }
 }

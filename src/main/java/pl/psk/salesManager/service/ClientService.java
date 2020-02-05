@@ -14,15 +14,7 @@ public class ClientService {
     @Autowired
     private ClientRepository clients;
 
-    public void addClientToRepository(String firstName,
-                                      String familyName,
-                                      String address,
-                                      String email,
-                                      String phone,
-                                      String bankName,
-                                      String bankAccountNumber) {
-        Client client = new Client();
-        client.setClientDetails(firstName, familyName, address, email, phone, bankName, bankAccountNumber);
+    public void addClientToRepository(Client client) {
         client.setOrders(new ArrayList<>());
         client.setRegularCustomer(false);
         clients.save(client);
@@ -30,5 +22,17 @@ public class ClientService {
 
     public List<Client> findAllClients() {
         return clients.findAll();
+    }
+
+    public void removeClient(int clientId) {
+        clients.delete(clients.findById(clientId));
+    }
+
+    public Client findClient(int id) {
+        return clients.findById(id);
+    }
+
+    public void editClient(Client client) {
+        clients.save(client);
     }
 }
