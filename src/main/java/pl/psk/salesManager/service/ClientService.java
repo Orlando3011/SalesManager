@@ -35,4 +35,8 @@ public class ClientService {
     public void editClient(Client client) {
         clients.save(client);
     }
+
+    public ClientRepository getClients() {
+        return clients;
+    }
 }
