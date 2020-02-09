@@ -2,7 +2,6 @@ package pl.psk.salesManager.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestParam;
 import pl.psk.salesManager.model.Client;
 import pl.psk.salesManager.repository.ClientRepository;
 
@@ -34,9 +33,5 @@ public class ClientService {
 
     public void editClient(Client client) {
         clients.save(client);
-    }
-
-    public ClientRepository getClients() {
-        return clients;
     }
 }

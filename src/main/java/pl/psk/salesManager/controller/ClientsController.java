@@ -1,4 +1,4 @@
-package pl.psk.salesManager.controller.client;
+package pl.psk.salesManager.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,7 +26,7 @@ public class ClientsController {
     }
 
     @GetMapping("/addClient")
-    public String ShowAddClientsPage(Model model) {
+    public String ShowAddClientPage(Model model) {
         model.addAttribute(new Client());
         return "client/addClient";
     }
@@ -39,7 +39,7 @@ public class ClientsController {
     }
 
     @GetMapping("/editClient/{id}")
-    public String ShowEditClientsPage(Model model, @PathVariable(name = "id") int id) {
+    public String ShowEditClientPage(Model model, @PathVariable(name = "id") int id) {
         model.addAttribute(clientService.findClient(id));
         return "client/editClient";
     }

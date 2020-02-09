@@ -15,7 +15,7 @@ public class Order {
     @NotNull
     @ManyToOne
     private Client client;
-    @ManyToMany
+    @OneToMany(mappedBy = "order")
     private List<Product> products;
     @CreatedDate
     private Date created;
