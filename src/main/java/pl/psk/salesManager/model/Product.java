@@ -15,12 +15,12 @@ public class Product {
     @NotNull
     private Double price;
     private String PKWiUSymbol;
-    @NotNull
     private boolean isAvailable;
+    @NotNull
+    private int inStock;
     private String imageSource;
     @ManyToOne
     private Order order;
-
 
     public Product() {}
 
@@ -57,7 +57,7 @@ public class Product {
         this.PKWiUSymbol = PKWiUSymbol;
     }
 
-    public boolean isAvailable() {
+    public boolean getIsAvailable() {
         return isAvailable;
     }
 
@@ -91,15 +91,32 @@ public class Product {
         return copy;
     }
 
-    public List<Product> multiplyProduct(int quantity) {
+    public List<Product> multiplyProduct() {
         List<Product> products = new ArrayList<>();
-        if (quantity <= 0) {
+        if (inStock <= 0) {
             return products;
         }
         products.add(this);
-        while(products.size() < quantity) {
+        while(products.size() < inStock) {
             products.add(this.copyProduct());
         }
         return products;
+    }
+
+    public int getInStock() {
+        return inStock;
+    }
+
+    public void setInStock(int inStock) {
+        this.inStock = inStock;
+    }
+
+    public void checkAvailability() {
+        if(inStock <= 0) {
+            this.setAvailable(false);
+        }
+        else {
+            this.setAvailable(true);
+        }
     }
 }

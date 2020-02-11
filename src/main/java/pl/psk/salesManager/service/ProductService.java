@@ -2,7 +2,6 @@ package pl.psk.salesManager.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pl.psk.salesManager.model.Client;
 import pl.psk.salesManager.model.Product;
 import pl.psk.salesManager.repository.ProductRepository;
 
@@ -13,8 +12,9 @@ public class ProductService {
     @Autowired
     private ProductRepository productRepository;
 
-    public void addProductToRepository(Product product, int quantity) {
-        List<Product> products = product.multiplyProduct(quantity);
+    public void addProductToRepository(Product product) {
+        product.checkAvailability();
+        List<Product> products = product.multiplyProduct();
         for (Product element:products) {
             productRepository.save(element);
         }

@@ -8,7 +8,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ProductTest {
     Product product;
-    int quantity;
 
     @Test
     public void shouldReturnOneElementList() {
@@ -16,8 +15,9 @@ class ProductTest {
         product = new Product();
         List<Product> products;
         //when
-        quantity = 1;
-        products = product.multiplyProduct(quantity);
+        int quantity = 1;
+        product.setInStock(quantity);
+        products = product.multiplyProduct();
         //then
         assertEquals(quantity, products.size());
     }
@@ -28,8 +28,8 @@ class ProductTest {
         product = new Product();
         List<Product> products;
         //when
-        quantity = 0;
-        products = product.multiplyProduct(quantity);
+        int quantity = 0;
+        products = product.multiplyProduct();
         //then
         assertEquals(quantity, products.size());
     }
