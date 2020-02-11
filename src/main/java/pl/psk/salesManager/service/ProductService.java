@@ -14,10 +14,7 @@ public class ProductService {
 
     public void addProductToRepository(Product product) {
         product.checkAvailability();
-        List<Product> products = product.multiplyProduct();
-        for (Product element:products) {
-            productRepository.save(element);
-        }
+        productRepository.save(product);
     }
 
     public List<Product> findAllProducts() {

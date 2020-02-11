@@ -1,36 +1,20 @@
 package pl.psk.salesManager.model;
 
 import org.junit.jupiter.api.Test;
-
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class ProductTest {
     Product product;
 
     @Test
-    public void shouldReturnOneElementList() {
+    public void shouldBeAvailable() {
         //given
         product = new Product();
-        List<Product> products;
+        product.setInStock(10);
         //when
-        int quantity = 1;
-        product.setInStock(quantity);
-        products = product.multiplyProduct();
+        product.checkAvailability();
         //then
-        assertEquals(quantity, products.size());
+        assertTrue(product.getIsAvailable());
     }
 
-    @Test
-    public void shouldReturnEmptyList() {
-        //given
-        product = new Product();
-        List<Product> products;
-        //when
-        int quantity = 0;
-        products = product.multiplyProduct();
-        //then
-        assertEquals(quantity, products.size());
-    }
 }

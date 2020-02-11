@@ -2,9 +2,6 @@ package pl.psk.salesManager.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.util.ArrayList;
-import java.util.List;
-
 @Entity
 public class Product {
     @Id
@@ -79,28 +76,6 @@ public class Product {
 
     public void setOrder(Order order) {
         this.order = order;
-    }
-
-    private Product copyProduct() {
-        Product copy = new Product();
-        copy.setName(this.name);
-        copy.setPKWiUSymbol(this.PKWiUSymbol);
-        copy.setPrice(this.price);
-        copy.setAvailable(this.isAvailable);
-        copy.setImageSource(this.imageSource);
-        return copy;
-    }
-
-    public List<Product> multiplyProduct() {
-        List<Product> products = new ArrayList<>();
-        if (inStock <= 0) {
-            return products;
-        }
-        products.add(this);
-        while(products.size() < inStock) {
-            products.add(this.copyProduct());
-        }
-        return products;
     }
 
     public int getInStock() {
