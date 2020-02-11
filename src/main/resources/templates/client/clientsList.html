@@ -21,6 +21,7 @@
             <th scope="col"> E-Mail </th>
             <th scope="col"> Phone </th>
             <th scope="col"> Regular Customer </th>
+            <th scope="col"> Details </th>
             <th scope="col"> Edit </th>
             <th scope="col"> Remove </th>
         </tr>
@@ -37,6 +38,7 @@
             <td><span th:text="${client.email}"> E-Mail </span></td>
             <td><span th:text="${client.phone}"> Phone </span></td>
             <td><span th:text="${client.regularCustomer}"> Regular Customer </span></td>
+            <td><a th:href="@{/clientDetails/{id}(id=${client.id})}" class="btn btn-secondary">Details</a></td>
             <td><a th:href="@{/editClient/{id}(id=${client.id})}" class="btn btn-primary">Edit</a></td>
             <td><a th:href="@{/deleteClient/{id}(id=${client.id})}" class="btn btn-danger">Delete</a></td>
         </tr>

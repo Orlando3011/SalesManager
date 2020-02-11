@@ -18,6 +18,12 @@ public class ClientsController {
         return "client/clientsList";
     }
 
+    @GetMapping("/clientDetails/{id}")
+    public String ShowClientsDetails(Model model, @PathVariable(name = "id") int id) {
+        model.addAttribute("client", clientService.findClient(id));
+        return "client/clientDetails";
+    }
+
     @GetMapping("/deleteClient/{id}")
     public String deleteClient(Model model, @PathVariable(name = "id") int id){
         clientService.removeClient(id);

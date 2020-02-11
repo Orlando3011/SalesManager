@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <title>addClient</title>
+</head>
+<body>
+<div th:insert="layout/header"></div>
+
+
+<div class="container-fluid">
+    <div class="panel panel-default">
+        <div class="panel-heading">Client details</div>
+        <div class="panel-body">
+            <form th:object="${client}">
+                <div class="form-group row">
+                    <label for="firstName" class="col-sm-2 col-form-label">First Name</label>
+                    <div class="col-sm-10">
+                        <input class="form-control-plaintext" id="firstName" name="firstName" th:field="*{firstName}" readonly>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="familyName" class="col-sm-2 col-form-label">Family Name</label>
+                    <div class="col-sm-10">
+                        <input class="form-control-plaintext" id="familyName" name="familyName" th:field="*{familyName}" readonly>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="address" class="col-sm-2 col-form-label">Address</label>
+                    <div class="col-sm-10">
+                        <input class="form-control-plaintext" id="address" name="address" th:field="*{address}" readonly>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="email" class="col-sm-2 col-form-label">E-mail</label>
+                    <div class="col-sm-10">
+                        <input class="form-control-plaintext" id="email" name="email" th:field="*{email}" readonly>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="email" class="col-sm-2 col-form-label">Phone</label>
+                    <div class="col-sm-10">
+                        <input class="form-control-plaintext" id="phone" name="phone" th:field="*{phone}" readonly>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="bankName" class="col-sm-2 col-form-label">Bank Name</label>
+                    <div class="col-sm-10">
+                        <input class="form-control-plaintext" id="bankName" name="bankName" th:field="*{bankName}" readonly>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="bankAccountNumber" class="col-sm-2 col-form-label">Bank account number</label>
+                    <div class="col-sm-10">
+                        <input class="form-control-plaintext" id="bankAccountNumber" name="bankAccountNumber" th:field="*{bankAccountNumber}" readonly>
+                    </div>
+                </div>
+            </form>
+            <a th:href="@{/editClient/{id}(id=${client.id})}" class="btn btn-primary">Edit</a>
+            <a th:href="@{/deleteClient/{id}(id=${client.id})}" class="btn btn-danger">Delete</a>
+        </div>
+    </div>
+</div>
+
+<div th:insert="layout/footer"></div>
+</body>
+</html>
