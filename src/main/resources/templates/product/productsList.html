@@ -31,7 +31,7 @@
         <tr th:each="product : ${productsList}">
             <td><span th:text="${product.id}"> ID </span></td>
             <td><span th:text="${product.name}"> Name </span></td>
-            <td><span th:text="${product.PKWiUSymbol}"> PKwiU Symbol </span></td>
+            <td><span th:text="${product.pkwiuSymbol}"> PKwiU Symbol </span></td>
             <td><span th:text="${product.inStock}"> In stock </span></td>
             <td><span th:text="${product.price}"> Price </span></td>
             <td><img th:src="${product.imageSource}" class="img-fluid img-thumbnail" alt="Product image" width="50" height="50"></td>

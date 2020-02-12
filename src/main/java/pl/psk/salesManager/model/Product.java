@@ -2,7 +2,9 @@ package pl.psk.salesManager.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+
 @Entity
+@Table(name = "products")
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
