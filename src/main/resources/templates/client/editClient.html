@@ -31,10 +31,12 @@
                 <div class="col-sm-10">
                     <br /><label for="email">E-Mail</label>
                     <input type="email" id="email" name="email" th:field="*{email}" class="form-control" placeholder="jbean50@gmail.com">
+                    <div class="invalid-feedback">Input proper e-mail address</div>
                 </div>
                 <div class="col-sm-10">
                     <br /><label for="phone">Phone</label>
                     <input type="tel" id="phone" name="phone" th:field="*{phone}" class="form-control" placeholder="123456789">
+                    <div class="invalid-feedback">Input proper phone number</div>
                 </div>
                 <div class="col-sm-10">
                     <br /><label for="bankName">Bank Name</label>
@@ -44,7 +46,7 @@
                 <div class="col-sm-10">
                     <br /><label for="bankAccountNumber">Bank account number</label>
                     <input type="number" id="bankAccountNumber" name="bankAccountNumber" th:field="*{bankAccountNumber}" class="form-control" placeholder="" required>
-                    <div class="invalid-feedback">Field should not be empty</div>
+                    <div class="invalid-feedback">Input proper account number</div>
                 </div>
                 <div class="col-sm-10">
                     <br /><button type="submit" class="btn btn-primary">Edit client data</button>

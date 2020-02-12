@@ -24,7 +24,7 @@ public class ProductController {
     @GetMapping("/deleteProduct/{id}")
     public String deleteProduct(Model model, @PathVariable(name = "id") int id){
         productService.removeProduct(id);
-        model.addAttribute("clientsList", productService.findAllProducts());
+        model.addAttribute("productsList", productService.findAllProducts());
         return "redirect:/products";
     }
 

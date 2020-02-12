@@ -11,7 +11,7 @@ public class Product {
     private String name;
     @NotNull
     private Double price;
-    private String PKWiUSymbol;
+    private String pkwiuSymbol;
     private boolean isAvailable;
     @NotNull
     private int inStock;
@@ -46,12 +46,12 @@ public class Product {
         this.price = price;
     }
 
-    public String getPKWiUSymbol() {
-        return PKWiUSymbol;
+    public String getPkwiuSymbol() {
+        return pkwiuSymbol;
     }
 
-    public void setPKWiUSymbol(String PKWiUSymbol) {
-        this.PKWiUSymbol = PKWiUSymbol;
+    public void setPkwiuSymbol(String pkwiuSymbol) {
+        this.pkwiuSymbol = pkwiuSymbol;
     }
 
     public boolean getIsAvailable() {

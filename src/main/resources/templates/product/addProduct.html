@@ -25,20 +25,21 @@
                 </div>
                 <div class="col-sm-10">
                     <br /><label for="price">Price</label>
-                    <input type="number" id="price" name="price" th:field="*{price}" class="form-control" placeholder="19.99" required>
+                    <input type="text" id="price" name="price" th:field="*{price}" class="form-control" placeholder="19.99" required>
                     <div class="invalid-feedback">Field should not be empty</div>
                 </div>
                 <div class="col-sm-10">
                     <br /><label for="inStock">Quantity</label>
                     <input type="number" id="inStock" name="inStock" th:field="*{inStock}" class="form-control" placeholder="6" required>
-                    <div class="invalid-feedback">Field should not be empty</div>
+                    <div class="invalid-feedback">Input proper number</div>
                 </div>
                 <div class="col-sm-10">
                     <br /><label for="imageSource">Image URL</label>
-                    <input type="text" id="imageSource" name="imageSource" th:field="*{imageSource}" class="form-control" placeholder="Image URL">
+                    <input type="url" id="imageSource" name="imageSource" th:field="*{imageSource}" class="form-control" placeholder="Image URL">
+                    <div class="invalid-feedback">Input proper URL link</div>
                 </div>
                 <div class="col-sm-10">
-                    <br /><button type="submit" class="btn btn-primary">Add product to database</button>
+                    <br /><button type="submit" class="btn btn-primary">Add product</button>
                 </div>
             </form>
         </div>
@@ -63,7 +64,6 @@
 })();
 </script>
 
-</div>
 <div th:insert="layout/footer"></div>
 </body>
 </html>
