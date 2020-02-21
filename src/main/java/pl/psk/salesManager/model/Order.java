@@ -22,6 +22,8 @@ public class Order {
     private Date created;
     private Integer invoiceNumber;
     private String paymentMethod;
+    private double totalPrice;
+    private String clientFullName;
 
     public Order() {}
 
@@ -39,5 +41,64 @@ public class Order {
 
     public void setClient(Client client) {
         this.client = client;
+    }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
+    }
+
+    public Date getCreated() {
+        return created;
+    }
+
+    public void setCreated(Date created) {
+        this.created = created;
+    }
+
+    public Integer getInvoiceNumber() {
+        return invoiceNumber;
+    }
+
+    public void setInvoiceNumber(Integer invoiceNumber) {
+        this.invoiceNumber = invoiceNumber;
+    }
+
+    public String getPaymentMethod() {
+        return paymentMethod;
+    }
+
+    public void setPaymentMethod(String paymentMethod) {
+        this.paymentMethod = paymentMethod;
+    }
+
+    public double getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(double totalPrice) {
+        this.totalPrice = totalPrice;
+    }
+
+    public String getClientFullName() {
+        return clientFullName;
+    }
+
+    public void setClientFullName(String clientFullName) {
+        this.clientFullName = clientFullName;
+    }
+
+    public void sumPrices() {
+        totalPrice = 0;
+        for(Product product: products) {
+            totalPrice = totalPrice + product.getPrice();
+        }
+    }
+
+    public void mergeClientCredentials() {
+        clientFullName = client.getFirstName() + " " + client.getFamilyName();
     }
 }
