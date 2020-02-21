@@ -24,6 +24,7 @@ public class Order {
     private String paymentMethod;
     private double totalPrice;
     private String clientFullName;
+    private int productsBought;
 
     public Order() {}
 
@@ -89,6 +90,18 @@ public class Order {
 
     public void setClientFullName(String clientFullName) {
         this.clientFullName = clientFullName;
+    }
+
+    public int getProductsBought() {
+        return productsBought;
+    }
+
+    public void setProductsBought(int productsBought) {
+        this.productsBought = productsBought;
+    }
+
+    public void countProducts() {
+        productsBought = products.size();
     }
 
     public void sumPrices() {
