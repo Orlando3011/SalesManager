@@ -23,8 +23,9 @@ public class Order {
     private Integer invoiceNumber;
     private String paymentMethod;
     private double totalPrice;
-    private String clientFullName;
+    private int clientIdNumber;
     private int productsBought;
+    private String description;
 
     public Order() {}
 
@@ -84,20 +85,28 @@ public class Order {
         this.totalPrice = totalPrice;
     }
 
-    public String getClientFullName() {
-        return clientFullName;
-    }
-
-    public void setClientFullName(String clientFullName) {
-        this.clientFullName = clientFullName;
-    }
-
     public int getProductsBought() {
         return productsBought;
     }
 
     public void setProductsBought(int productsBought) {
         this.productsBought = productsBought;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public int getClientIdNumber() {
+        return clientIdNumber;
+    }
+
+    public void setClientIdNumber(int clientIdNumber) {
+        this.clientIdNumber = clientIdNumber;
     }
 
     public void countProducts() {
@@ -109,9 +118,5 @@ public class Order {
         for(Product product: products) {
             totalPrice = totalPrice + product.getPrice();
         }
-    }
-
-    public void mergeClientCredentials() {
-        clientFullName = client.getFirstName() + " " + client.getFamilyName();
     }
 }

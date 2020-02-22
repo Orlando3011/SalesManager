@@ -17,6 +17,7 @@ public class Client {
     private String firstName;
     @NotNull
     private String familyName;
+    private String clientFullName;
     private String address;
     private String email;
     private String bankName;
@@ -116,6 +117,14 @@ public class Client {
 
     public void setBankAccountNumber(String bankAccountNumber) {
         this.bankAccountNumber = bankAccountNumber;
+    }
+
+    public String getClientFullName() {
+        return clientFullName;
+    }
+
+    public void setClientFullName(String clientFullName) {
+        this.clientFullName = clientFullName;
     }
 
     public int countOrders() {

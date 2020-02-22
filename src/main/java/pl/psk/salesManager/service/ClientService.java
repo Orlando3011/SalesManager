@@ -14,6 +14,7 @@ public class ClientService {
     private ClientRepository clients;
 
     public void addClientToRepository(Client client) {
+        client.setClientFullName(client.getFirstName() + " " + client.getFamilyName());
         client.setOrders(new ArrayList<>());
         client.setRegularCustomer(false);
         clients.save(client);
