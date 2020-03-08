@@ -2,6 +2,7 @@ package pl.psk.salesManager.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 @Entity
 @Table(name = "products")
@@ -20,6 +21,8 @@ public class Product {
     private String imageSource;
     @ManyToOne
     private Order order;
+    @OneToMany(mappedBy = "product")
+    List<SoldProduct> soldProducts;
 
     public Product() {}
 
@@ -95,5 +98,17 @@ public class Product {
         else {
             this.setAvailable(true);
         }
+    }
+
+    public boolean isAvailable() {
+        return isAvailable;
+    }
+
+    public List<SoldProduct> getSoldProducts() {
+        return soldProducts;
+    }
+
+    public void setSoldProducts(List<SoldProduct> soldProducts) {
+        this.soldProducts = soldProducts;
     }
 }

@@ -17,7 +17,7 @@ public class Order {
     @ManyToOne
     private Client client;
     @OneToMany(mappedBy = "order")
-    private List<Product> products;
+    private List<SoldProduct> productsOrdered;
     @CreatedDate
     private Date created;
     private Integer invoiceNumber;
@@ -26,6 +26,7 @@ public class Order {
     private int clientIdNumber;
     private int productsBought;
     private String description;
+    private String clientFullName;
 
     public Order() {}
 
@@ -45,12 +46,12 @@ public class Order {
         this.client = client;
     }
 
-    public List<Product> getProducts() {
-        return products;
+    public List<SoldProduct> getProductsOrdered() {
+        return productsOrdered;
     }
 
-    public void setProducts(List<Product> products) {
-        this.products = products;
+    public void setProductsOrdered(List<SoldProduct> productsOrdered) {
+        this.productsOrdered = productsOrdered;
     }
 
     public Date getCreated() {
@@ -109,14 +110,21 @@ public class Order {
         this.clientIdNumber = clientIdNumber;
     }
 
-    public void countProducts() {
-        productsBought = products.size();
+    public String getClientFullName() {
+        return clientFullName;
     }
 
-    public void sumPrices() {
-        totalPrice = 0;
-        for(Product product: products) {
-            totalPrice = totalPrice + product.getPrice();
-        }
+    public void setClientFullName(String clientFullName) {
+        this.clientFullName = clientFullName;
     }
+
+    public void countProducts() {
+        productsBought = productsOrdered.size();
+    }
+
+    public void createClientFullName() {
+        clientFullName = client.getFirstName() + " " + client.getFamilyName();
+    }
+
+
 }

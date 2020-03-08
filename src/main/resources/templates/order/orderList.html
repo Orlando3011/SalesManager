@@ -31,7 +31,7 @@
         <tr th:each="order : ${ordersList}">
             <td><span th:text="${order.id}"> ID </span></td>
             <td><span th:text="${order.clientFullName}"> Client name </span></td>
-            <td><span th:text="${order.date}"> Date </span></td>
+            <td><span th:text="${order.created}"> Date </span></td>
             <td><span th:text="${order.productsBought}"> Products bought </span></td>
             <td><span th:text="${order.totalPrice}"> Total price </span></td>
             <td><a th:href="@{/editOrder/{id}(id=${order.id})}" class="btn btn-primary">Edit</a></td>
