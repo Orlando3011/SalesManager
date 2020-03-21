@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import pl.psk.salesManager.model.Client;
 import pl.psk.salesManager.model.Order;
@@ -25,7 +26,7 @@ public class OrderController {
 
     @GetMapping("/orders")
     public String ShowOrdersPage(Model model) {
-        model.addAttribute("ordersList", orderService.getAllOrders());
+        model.addAttribute("ordersList", orderService.findAllOrders());
         return "order/orderList";
     }
 
@@ -40,7 +41,14 @@ public class OrderController {
     @PostMapping("/addOrder")
     public String AddNewOrder(@ModelAttribute Order order, @ModelAttribute Client client, Model model) {
         orderService.addOrderToRepository(order, client);
-        model.addAttribute("ordersList", orderService.getAllOrders());
+        model.addAttribute("ordersList", orderService.findAllOrders());
+        return "redirect:/orders";
+    }
+
+    @GetMapping("/deleteOrder/{id}")
+    public String deleteOrder(Model model, @PathVariable(name = "id") int id){
+        orderService.removeOrder(id);
+        model.addAttribute("ordersList", orderService.findAllOrders());
         return "redirect:/orders";
     }
 }

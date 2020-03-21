@@ -16,14 +16,19 @@ public class OrderService {
     @Autowired
     private ClientRepository clientRepository;
 
-    public List<Order> getAllOrders() {
+    public List<Order> findAllOrders() {
         return orderRepository.findAll();
     }
 
     public void addOrderToRepository(Order order, Client client) {
         order.setClient(clientRepository.findById(order.getClientIdNumber()));
+        order.createClientFullName();
         order.setProductsBought(0);
         order.setTotalPrice(0);
         orderRepository.save(order);
+    }
+
+    public void removeOrder(int id) {
+        orderRepository.delete(orderRepository.findById(id));
     }
 }
