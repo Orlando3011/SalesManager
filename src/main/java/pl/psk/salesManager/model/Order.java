@@ -122,9 +122,42 @@ public class Order {
         productsBought = productsOrdered.size();
     }
 
+    public void countPrice() {
+        double price = 0;
+        for (SoldProduct p:productsOrdered) {
+            price = price + p.getProduct().getPrice() * p.getQuantity();
+        }
+        totalPrice = price;
+    }
+
     public void createClientFullName() {
         clientFullName = client.getFirstName() + " " + client.getFamilyName();
     }
 
+    public void addProduct(SoldProduct soldProduct) {
+        productsOrdered.add(soldProduct);
+        productsBought = productsBought + soldProduct.getQuantity();
+        totalPrice = totalPrice + soldProduct.getProduct().getPrice() * soldProduct.getQuantity();
+    }
 
+    public void incrementProduct(SoldProduct soldProduct) {
+        for (SoldProduct s:productsOrdered) {
+            if(s.getProduct().equals(soldProduct.getProduct())) {
+                s.setQuantity(s.getQuantity() + soldProduct.getQuantity());
+            }
+        }
+        productsBought = productsBought + soldProduct.getQuantity();
+        totalPrice = totalPrice + soldProduct.getProduct().getPrice() * soldProduct.getQuantity();
+    }
+
+    public boolean checkIfProductIsOrdered(SoldProduct soldProduct) {
+        if(productsOrdered.size() != 0) {
+            for (SoldProduct p:productsOrdered) {
+                if (p.getProduct().equals(soldProduct.getProduct())) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }

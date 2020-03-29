@@ -3,12 +3,10 @@ package pl.psk.salesManager.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import pl.psk.salesManager.model.Client;
 import pl.psk.salesManager.model.Order;
+import pl.psk.salesManager.model.Product;
 import pl.psk.salesManager.service.ClientService;
 import pl.psk.salesManager.service.OrderService;
 import pl.psk.salesManager.service.ProductService;
@@ -39,8 +37,8 @@ public class OrderController {
     }
 
     @PostMapping("/addOrder")
-    public String AddNewOrder(@ModelAttribute Order order, @ModelAttribute Client client, Model model) {
-        orderService.addOrderToRepository(order, client);
+    public String AddNewOrder(@ModelAttribute Order order, Model model) {
+        orderService.addOrderToRepository(order);
         model.addAttribute("ordersList", orderService.findAllOrders());
         return "redirect:/orders";
     }
@@ -50,5 +48,28 @@ public class OrderController {
         orderService.removeOrder(id);
         model.addAttribute("ordersList", orderService.findAllOrders());
         return "redirect:/orders";
+    }
+
+    @GetMapping("/editOrder/{id}")
+    public String ShowEditOrderPage(Model model, @PathVariable(name = "id") int id) {
+        model.addAttribute("order", orderService.findOrder(id));
+        List<Client> clients = clientService.findAllClients();
+        model.addAttribute("clients", clients);
+        model.addAttribute("productsList", productService.findAllProducts());
+        model.addAttribute("orderedProductsList", orderService.findOrder(id).getProductsOrdered() );
+        return "order/editOrder";
+    }
+
+    @PostMapping("/editOrder/{id}")
+    public String editOrder(Model model, @PathVariable("id") int id) {
+        orderService.editOrder(orderService.findOrder(id));
+        model.addAttribute("ordersList", orderService.findAllOrders());
+        return "redirect:/orders";
+    }
+
+    @GetMapping("/orderProduct/{orderId}/product/{productId}")
+    public String addProductToOrder(Model model, @PathVariable(name = "orderId") int orderId, @PathVariable(name = "productId") int productId) {
+        orderService.addProductToOrder(productService.findProductById(productId), orderService.findOrder(orderId), 1);
+        return "redirect:/editOrder/{orderId}";
     }
 }
