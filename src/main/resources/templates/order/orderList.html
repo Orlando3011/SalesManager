@@ -17,8 +17,10 @@
         <tr>
             <th scope="col"> ID </th>
             <th scope="col"> Client </th>
+            <th scope="col"> Date </th>
             <th scope="col"> Products bought </th>
             <th scope="col"> Total price </th>
+            <th scope="col"> Details </th>
             <th scope="col"> Edit </th>
             <th scope="col"> Remove </th>
         </tr>
@@ -30,8 +32,10 @@
         <tr th:each="order : ${ordersList}">
             <td><span th:text="${order.id}"> ID </span></td>
             <td><span th:text="${order.clientFullName}"> Client </span></td>
+            <td><span th:text="${order.dateDisplayed}"> Date </span></td>
             <td><span th:text="${order.productsBought}"> Products bought </span></td>
             <td><span th:text="${order.totalPrice}"> Total price </span></td>
+            <td><a th:href="@{/orderDetails/{id}(id=${order.id})}" class="btn btn-secondary">Details</a></td>
             <td><a th:href="@{/editOrder/{id}(id=${order.id})}" class="btn btn-primary">Edit</a></td>
             <td><a th:href="@{/deleteOrder/{id}(id=${order.id})}" class="btn btn-danger">Delete</a></td>
         </tr>

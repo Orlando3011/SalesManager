@@ -39,6 +39,7 @@ public class OrderController {
     @PostMapping("/addOrder")
     public String AddNewOrder(@ModelAttribute Order order, Model model) {
         orderService.addOrderToRepository(order);
+        System.out.println("Payment: " + order.getPaymentMethod());
         model.addAttribute("ordersList", orderService.findAllOrders());
         return "redirect:/orders";
     }
@@ -71,5 +72,12 @@ public class OrderController {
     public String addProductToOrder(Model model, @PathVariable(name = "orderId") int orderId, @PathVariable(name = "productId") int productId) {
         orderService.addProductToOrder(productService.findProductById(productId), orderService.findOrder(orderId), 1);
         return "redirect:/editOrder/{orderId}";
+    }
+
+    @GetMapping("/orderDetails/{id}")
+    public String showOrderDetails(Model model, @PathVariable(name = "id") int id) {
+        model.addAttribute("orderedProductsList", orderService.findOrder(id).getProductsOrdered());
+        model.addAttribute("order", orderService.findOrder(id));
+        return "order/orderDetails";
     }
 }

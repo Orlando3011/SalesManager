@@ -1,5 +1,6 @@
 package pl.psk.salesManager.service;
 
+import org.aspectj.weaver.ast.Or;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.psk.salesManager.model.Order;
@@ -9,7 +10,9 @@ import pl.psk.salesManager.repository.ClientRepository;
 import pl.psk.salesManager.repository.OrderRepository;
 import pl.psk.salesManager.repository.SoldProductRepository;
 
+import java.text.DateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -34,9 +37,19 @@ public class OrderService {
         order.setProductsBought(0);
         order.setTotalPrice(0);
         orderRepository.save(order);
+
+        DateFormat df = DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT);
+        Date date = order.getCreated();
+        order.setDateDisplayed(df.format(order.getCreated()));
+        orderRepository.save(order);
     }
 
     public void removeOrder(int id) {
+        Order order = orderRepository.findById(id);
+        for (SoldProduct product:order.getProductsOrdered()) {
+            soldProductRepository.delete(soldProductRepository.findById(product.getId()));
+            order.getProductsOrdered().remove(product);
+        }
         orderRepository.delete(orderRepository.findById(id));
     }
 

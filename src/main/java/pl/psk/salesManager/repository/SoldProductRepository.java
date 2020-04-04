@@ -6,4 +6,5 @@ import pl.psk.salesManager.model.SoldProduct;
 
 @Repository
 public interface SoldProductRepository extends JpaRepository<SoldProduct, Integer> {
+    SoldProduct findById(int id);
 }

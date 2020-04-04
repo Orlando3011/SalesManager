@@ -1,6 +1,7 @@
 package pl.psk.salesManager.model;
 
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -8,6 +9,7 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
+@EntityListeners(AuditingEntityListener.class)
 @Table(name = "orders")
 public class Order {
     @Id
@@ -20,6 +22,7 @@ public class Order {
     private List<SoldProduct> productsOrdered;
     @CreatedDate
     private Date created;
+    private String dateDisplayed;
     private Integer invoiceNumber;
     private String paymentMethod;
     private double totalPrice;
@@ -116,6 +119,14 @@ public class Order {
 
     public void setClientFullName(String clientFullName) {
         this.clientFullName = clientFullName;
+    }
+
+    public String getDateDisplayed() {
+        return dateDisplayed;
+    }
+
+    public void setDateDisplayed(String dateDisplayed) {
+        this.dateDisplayed = dateDisplayed;
     }
 
     public void countProducts() {
