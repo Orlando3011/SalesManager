@@ -1,6 +1,5 @@
 package pl.psk.salesManager.service;
 
-import org.aspectj.weaver.ast.Or;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.psk.salesManager.model.Order;
@@ -63,6 +62,10 @@ public class OrderService {
         return orderRepository.findById(id);
     }
 
+    public SoldProduct findSoldProduct(int id) {
+        return soldProductRepository.findById(id);
+    }
+
     public void addProductToOrder(Product product, Order order, int quantity) {
         SoldProduct soldProduct = new SoldProduct();
         soldProduct.setProduct(product);
@@ -78,6 +81,29 @@ public class OrderService {
         }
         updateProductQuantity(soldProduct);
         orderRepository.save(order);
+    }
+
+    public void removeOneProduct(SoldProduct soldProduct, int quantity) {
+        if(soldProduct.getQuantity() == quantity) removeAllProduct(soldProduct);
+        else {
+            soldProduct.setQuantity(soldProduct.getQuantity() - quantity);
+            Product product = soldProduct.getProduct();
+            product.setInStock(product.getInStock() + quantity);
+            soldProductRepository.save(soldProduct);
+            productService.addProductToRepository(product);
+        }
+    }
+
+    public void removeAllProduct(SoldProduct soldProduct) {
+        Order order = soldProduct.getOrder();
+        Product product = soldProduct.getProduct();
+        product.setInStock(product.getInStock() + soldProduct.getQuantity());
+        order.getProductsOrdered().remove(soldProduct);
+        order.countPrice();
+        order.countProducts();
+        orderRepository.save(order);
+        productService.addProductToRepository(product);
+        soldProductRepository.delete(soldProduct);
     }
 
     private void updateProductQuantity(SoldProduct soldProduct) {

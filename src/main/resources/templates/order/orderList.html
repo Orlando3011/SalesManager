@@ -20,6 +20,7 @@
             <th scope="col"> Date </th>
             <th scope="col"> Products bought </th>
             <th scope="col"> Total price </th>
+            <th scope="col"> Generate invoice </th>
             <th scope="col"> Details </th>
             <th scope="col"> Edit </th>
             <th scope="col"> Remove </th>
@@ -35,6 +36,7 @@
             <td><span th:text="${order.dateDisplayed}"> Date </span></td>
             <td><span th:text="${order.productsBought}"> Products bought </span></td>
             <td><span th:text="${order.totalPrice}"> Total price </span></td>
+            <td><a th:href="@{/invoice/{orderId}(orderId=${order.id})}" class="btn btn-secondary">Generate invoice</a></td>
             <td><a th:href="@{/orderDetails/{id}(id=${order.id})}" class="btn btn-secondary">Details</a></td>
             <td><a th:href="@{/editOrder/{id}(id=${order.id})}" class="btn btn-primary">Edit</a></td>
             <td><a th:href="@{/deleteOrder/{id}(id=${order.id})}" class="btn btn-danger">Delete</a></td>

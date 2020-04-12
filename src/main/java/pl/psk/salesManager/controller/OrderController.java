@@ -74,6 +74,18 @@ public class OrderController {
         return "redirect:/editOrder/{orderId}";
     }
 
+    @GetMapping("/cancelProduct/{soldProductId}/order/{orderId}")
+    public String removeOneProduct(Model model, @PathVariable(name = "soldProductId") int soldProductId, @PathVariable(name = "orderId") int orderId) {
+        orderService.removeOneProduct(orderService.findSoldProduct(soldProductId), 1);
+        return "redirect:/editOrder/{orderId}";
+    }
+
+    @GetMapping("/cancelAllProduct/{soldProductId}/order/{orderId}")
+    public String removeAllProduct(Model model, @PathVariable(name = "soldProductId") int soldProductId, @PathVariable(name = "orderId") int orderId) {
+        orderService.removeAllProduct(orderService.findSoldProduct(soldProductId));
+        return "redirect:/editOrder/{orderId}";
+    }
+
     @GetMapping("/orderDetails/{id}")
     public String showOrderDetails(Model model, @PathVariable(name = "id") int id) {
         model.addAttribute("orderedProductsList", orderService.findOrder(id).getProductsOrdered());

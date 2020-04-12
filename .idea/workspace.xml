@@ -2,16 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c50e363-cf65-41b2-8670-bf3da7030519" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/order/orderDetails.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/controller/InvoiceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/controller/OwnerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/model/Owner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/repository/OwnerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/service/InvoiceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/service/OwnerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/owner/editOwner.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/owner/ownerDetails.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salesManager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/salesManager.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/model/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/model/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/model/SoldProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/model/SoldProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/repository/SoldProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/repository/SoldProductRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/order/addOrder.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/order/addOrder.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/order/editOrder.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/order/editOrder.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/order/orderList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/order/orderList.html" afterDir="false" />
     </list>
@@ -20,20 +24,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ErrorTreeViewConfiguration">
-    <option name="hideWarnings" value="true" />
-    <option name="HIDE_WARNINGS" value="true" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="salesManager" />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -46,7 +43,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -55,6 +51,9 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../IT/PatternsGenerator" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.37471265" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -155,18 +154,6 @@
         <item itemvalue="JUnit.ClientServiceTest.shouldAddClientToRepository" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -312,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585498653376</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Added order details&#10;Fixed minor issues">
+      <created>1586008112858</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1586008112858</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -320,13 +314,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
@@ -348,21 +341,22 @@
     <MESSAGE value="Fixed order adding" />
     <MESSAGE value="Added order deleting&#10;Fixed order table" />
     <MESSAGE value="Adding products to orders" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding products to orders" />
+    <MESSAGE value="Added order details&#10;Fixed minor issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added order details&#10;Fixed minor issues" />
   </component>
   <component name="WindowStateProjectService">
     <state x="543" y="216" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582464373922">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="543" y="216" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1582464373922" />
-    <state x="574" y="129" key="#com.intellij.ide.util.MemberChooser" timestamp="1586000042416">
+    <state x="574" y="129" key="#com.intellij.ide.util.MemberChooser" timestamp="1586697123667">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="129" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1586000042416" />
-    <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1585475054769">
+    <state x="574" y="129" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1586697123667" />
+    <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1586695847339">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1585475054769" />
+    <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1586695847339" />
     <state x="389" y="337" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1584797604063">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -371,38 +365,42 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="566" y="271" width="403" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1586000067013" />
-    <state x="334" y="0" key="CommitChangelistDialog2" timestamp="1585498651718">
+    <state x="334" y="0" key="CommitChangelistDialog2" timestamp="1586008112025">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="334" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585498651718" />
+    <state x="334" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586008112025" />
     <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1580752499167">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1580752499167" />
-    <state width="1493" height="250" key="GridCell.Tab.0.bottom" timestamp="1586006669651">
+    <state width="1493" height="216" key="GridCell.Tab.0.bottom" timestamp="1586710102516">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="250" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586006669651" />
-    <state width="1493" height="250" key="GridCell.Tab.0.center" timestamp="1586006669651">
+    <state width="1493" height="216" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586710102516" />
+    <state width="1493" height="216" key="GridCell.Tab.0.center" timestamp="1586710102516">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="250" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586006669651" />
-    <state width="1493" height="250" key="GridCell.Tab.0.left" timestamp="1586006669650">
+    <state width="1493" height="216" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586710102516" />
+    <state width="1493" height="216" key="GridCell.Tab.0.left" timestamp="1586710102516">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="250" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586006669650" />
-    <state width="1493" height="250" key="GridCell.Tab.0.right" timestamp="1586006669651">
+    <state width="1493" height="216" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586710102516" />
+    <state width="1493" height="216" key="GridCell.Tab.0.right" timestamp="1586710102516">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="250" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586006669651" />
-    <state x="277" y="55" key="SettingsEditor" timestamp="1581963532013">
+    <state width="1493" height="216" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586710102516" />
+    <state x="299" y="67" key="Maven.ArtifactSearchDialog" timestamp="1586705551612">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1581963532013" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1585498660726">
+    <state x="299" y="67" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1586705551612" />
+    <state x="277" y="0" key="SettingsEditor" timestamp="1586706151193">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1585498660726" />
+    <state x="277" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586706151193" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1586008120207">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586008120207" />
     <state x="117" y="105" key="com.intellij.javaee.MapExternalResourceDialog" timestamp="1580751305104">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -419,10 +417,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="476" y="204" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1582293314598" />
-    <state x="258" y="19" key="new project wizard" timestamp="1585753275510">
+    <state x="258" y="19" key="new project wizard" timestamp="1586706339503">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="258" y="19" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1585753275510" />
+    <state x="258" y="19" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1586706339503" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1584808601747">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
