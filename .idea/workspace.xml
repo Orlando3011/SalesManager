@@ -2,22 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c50e363-cf65-41b2-8670-bf3da7030519" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/controller/InvoiceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/controller/OwnerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/model/Owner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/repository/OwnerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/service/InvoiceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/service/OwnerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/owner/editOwner.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/owner/ownerDetails.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/salesManager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/salesManager.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/order/editOrder.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/order/editOrder.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/order/orderList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/order/orderList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/controller/InvoiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/controller/InvoiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/model/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/model/Owner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/service/InvoiceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/service/InvoiceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/service/OwnerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/service/OwnerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/owner/editOwner.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/owner/editOwner.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/owner/ownerDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/owner/ownerDetails.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +31,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1Vvi7bsAVSXW0s9d8AnfXvotL9r" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -55,7 +56,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.37471265" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -306,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586008112858</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Added owner details&#10;Added invoice service">
+      <created>1586710382720</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1586710382720</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -342,17 +350,18 @@
     <MESSAGE value="Added order deleting&#10;Fixed order table" />
     <MESSAGE value="Adding products to orders" />
     <MESSAGE value="Added order details&#10;Fixed minor issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added order details&#10;Fixed minor issues" />
+    <MESSAGE value="Added owner details&#10;Added invoice service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added owner details&#10;Added invoice service" />
   </component>
   <component name="WindowStateProjectService">
     <state x="543" y="216" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582464373922">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="543" y="216" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1582464373922" />
-    <state x="574" y="129" key="#com.intellij.ide.util.MemberChooser" timestamp="1586697123667">
+    <state x="574" y="129" key="#com.intellij.ide.util.MemberChooser" timestamp="1586784709318">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="129" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1586697123667" />
+    <state x="574" y="129" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1586784709318" />
     <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1586695847339">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -365,42 +374,42 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="566" y="271" width="403" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1586000067013" />
-    <state x="334" y="0" key="CommitChangelistDialog2" timestamp="1586008112025">
+    <state x="334" y="0" key="CommitChangelistDialog2" timestamp="1586710381933">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="334" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586008112025" />
+    <state x="334" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586710381933" />
     <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1580752499167">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1580752499167" />
-    <state width="1493" height="216" key="GridCell.Tab.0.bottom" timestamp="1586710102516">
+    <state width="1493" height="312" key="GridCell.Tab.0.bottom" timestamp="1587215019413">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="216" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586710102516" />
-    <state width="1493" height="216" key="GridCell.Tab.0.center" timestamp="1586710102516">
+    <state width="1493" height="312" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587215019413" />
+    <state width="1493" height="312" key="GridCell.Tab.0.center" timestamp="1587215019413">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="216" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586710102516" />
-    <state width="1493" height="216" key="GridCell.Tab.0.left" timestamp="1586710102516">
+    <state width="1493" height="312" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587215019413" />
+    <state width="1493" height="312" key="GridCell.Tab.0.left" timestamp="1587215019412">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="216" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586710102516" />
-    <state width="1493" height="216" key="GridCell.Tab.0.right" timestamp="1586710102516">
+    <state width="1493" height="312" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587215019412" />
+    <state width="1493" height="312" key="GridCell.Tab.0.right" timestamp="1587215019413">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="216" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586710102516" />
-    <state x="299" y="67" key="Maven.ArtifactSearchDialog" timestamp="1586705551612">
+    <state width="1493" height="312" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587215019413" />
+    <state x="299" y="67" key="Maven.ArtifactSearchDialog" timestamp="1586781182506">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="299" y="67" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1586705551612" />
-    <state x="277" y="0" key="SettingsEditor" timestamp="1586706151193">
+    <state x="299" y="67" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1586781182506" />
+    <state x="277" y="0" key="SettingsEditor" timestamp="1586780655054">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586706151193" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1586008120207">
+    <state x="277" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586780655054" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1586710389341">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586008120207" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586710389341" />
     <state x="117" y="105" key="com.intellij.javaee.MapExternalResourceDialog" timestamp="1580751305104">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -421,6 +430,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="258" y="19" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1586706339503" />
+    <state x="475" y="169" key="refactoring.ChangeSignatureDialog" timestamp="1587209037122">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="475" y="169" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1587209037122" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1584808601747">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

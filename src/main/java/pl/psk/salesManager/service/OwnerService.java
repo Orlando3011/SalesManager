@@ -12,8 +12,16 @@ public class OwnerService {
 
     public Owner displayOwnerData() {
         Owner owner;
-        if(ownerRepository.findAll().isEmpty()) {
+        if(ownerRepository.findAll().size() == 0) {
             owner = new Owner();
+            owner.setAddress("empty");
+            owner.setBankName("empty");
+            owner.setBankNumber("empty");
+            owner.setCompanyName("empty");
+            owner.setEmail("empty");
+            owner.setFamilyName("empty");
+            owner.setFirstName("empty");
+            owner.setPhone("empty");
             ownerRepository.save(owner);
         }
         else {

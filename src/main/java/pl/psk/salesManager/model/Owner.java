@@ -16,6 +16,8 @@ public class Owner {
     private String bankNumber;
     private String companyName;
     private String phone;
+    private String address;
+    private String email;
 
     public Owner() {
     }
@@ -74,5 +76,21 @@ public class Owner {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
