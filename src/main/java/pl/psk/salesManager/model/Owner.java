@@ -18,6 +18,8 @@ public class Owner {
     private String phone;
     private String address;
     private String email;
+    private String nip;
+    private String currencySymbol;
 
     public Owner() {
     }
@@ -92,5 +94,21 @@ public class Owner {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getNip() {
+        return nip;
+    }
+
+    public void setNip(String nip) {
+        this.nip = nip;
+    }
+
+    public String getCurrencySymbol() {
+        return currencySymbol;
+    }
+
+    public void setCurrencySymbol(String currencySymbol) {
+        this.currencySymbol = currencySymbol;
     }
 }

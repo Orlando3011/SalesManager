@@ -22,6 +22,7 @@ public class OwnerService {
             owner.setFamilyName("empty");
             owner.setFirstName("empty");
             owner.setPhone("empty");
+            owner.setNip("empty");
             ownerRepository.save(owner);
         }
         else {

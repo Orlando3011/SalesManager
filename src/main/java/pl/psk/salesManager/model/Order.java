@@ -171,4 +171,16 @@ public class Order {
         }
         return false;
     }
+
+    public double getTaxTotal() {
+        double taxTotal = 0;
+        for (SoldProduct product:productsOrdered) {
+            taxTotal = taxTotal + product.getProduct().getTax() * (product.getQuantity() * product.getProduct().getPrice());
+        }
+        return taxTotal;
+    }
+
+    public double getPriceAndTax() {
+        return getTotalPrice() + getTaxTotal();
+    }
 }

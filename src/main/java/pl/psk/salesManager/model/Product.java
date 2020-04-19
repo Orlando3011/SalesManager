@@ -25,7 +25,8 @@ public class Product {
     @ManyToOne
     private Order order;
     @OneToMany(mappedBy = "product")
-    List<SoldProduct> soldProducts;
+    private List<SoldProduct> soldProducts;
+    private float tax;
 
     public Product() {}
 
@@ -113,5 +114,13 @@ public class Product {
 
     public void setSoldProducts(List<SoldProduct> soldProducts) {
         this.soldProducts = soldProducts;
+    }
+
+    public float getTax() {
+        return tax;
+    }
+
+    public void setTax(float tax) {
+        this.tax = tax;
     }
 }
