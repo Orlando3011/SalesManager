@@ -1,5 +1,7 @@
 package pl.psk.salesManager.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,6 +11,7 @@ import pl.psk.salesManager.service.ClientService;
 
 @Controller
 public class ClientsController {
+    private static final Logger LOGGER = LoggerFactory.getLogger("application");
     @Autowired
     private ClientService clientService;
 
@@ -28,6 +31,7 @@ public class ClientsController {
     public String deleteClient(Model model, @PathVariable(name = "id") int id){
         clientService.removeClient(id);
         model.addAttribute("clientsList", clientService.findAllClients());
+        LOGGER.warn("Client deleted");
         return "redirect:/clients";
     }
 
@@ -41,6 +45,7 @@ public class ClientsController {
     public String addClient(@ModelAttribute Client client, Model model) {
         clientService.addClientToRepository(client);
         model.addAttribute("clientsList", clientService.findAllClients());
+        LOGGER.info("Client added");
         return "redirect:/clients";
     }
 
@@ -54,6 +59,7 @@ public class ClientsController {
     public String editClient(Model model, @ModelAttribute Client client) {
         clientService.editClient(client);
         model.addAttribute("clientsList", clientService.findAllClients());
+        LOGGER.info("Client edited");
         return "redirect:/clients";
     }
 }

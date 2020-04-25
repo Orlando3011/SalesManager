@@ -1,12 +1,13 @@
 package pl.psk.salesManager.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import pl.psk.salesManager.model.Client;
 import pl.psk.salesManager.model.Order;
-import pl.psk.salesManager.model.Product;
 import pl.psk.salesManager.service.ClientService;
 import pl.psk.salesManager.service.OrderService;
 import pl.psk.salesManager.service.ProductService;
@@ -15,6 +16,7 @@ import java.util.List;
 
 @Controller
 public class OrderController {
+    private static final Logger LOGGER = LoggerFactory.getLogger("application");
     @Autowired
     private OrderService orderService;
     @Autowired
@@ -41,6 +43,7 @@ public class OrderController {
         orderService.addOrderToRepository(order);
         System.out.println("Payment: " + order.getPaymentMethod());
         model.addAttribute("ordersList", orderService.findAllOrders());
+        LOGGER.info("Order added");
         return "redirect:/orders";
     }
 
@@ -48,6 +51,7 @@ public class OrderController {
     public String deleteOrder(Model model, @PathVariable(name = "id") int id){
         orderService.removeOrder(id);
         model.addAttribute("ordersList", orderService.findAllOrders());
+        LOGGER.warn("Order removed");
         return "redirect:/orders";
     }
 
@@ -65,6 +69,7 @@ public class OrderController {
     public String editOrder(Model model, @PathVariable("id") int id) {
         orderService.editOrder(orderService.findOrder(id));
         model.addAttribute("ordersList", orderService.findAllOrders());
+        LOGGER.info("Order modified");
         return "redirect:/orders";
     }
 

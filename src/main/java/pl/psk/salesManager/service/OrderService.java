@@ -45,10 +45,16 @@ public class OrderService {
 
     public void removeOrder(int id) {
         Order order = orderRepository.findById(id);
-        for (SoldProduct product:order.getProductsOrdered()) {
-            soldProductRepository.delete(soldProductRepository.findById(product.getId()));
-            order.getProductsOrdered().remove(product);
+        List<SoldProduct> productsToRemove = new ArrayList<>();
+        for (SoldProduct soldProduct:order.getProductsOrdered()) {
+            Product product = soldProduct.getProduct();
+            product.setInStock(product.getInStock() + soldProduct.getQuantity());
+            productService.addProductToRepository(product);
+
+            productsToRemove.add(soldProduct);
+            soldProductRepository.delete(soldProductRepository.findById(soldProduct.getId()));
         }
+        order.getProductsOrdered().removeAll(productsToRemove);
         orderRepository.delete(orderRepository.findById(id));
     }
 
@@ -69,18 +75,20 @@ public class OrderService {
     public void addProductToOrder(Product product, Order order, int quantity) {
         SoldProduct soldProduct = new SoldProduct();
         soldProduct.setProduct(product);
-        if(!order.checkIfProductIsOrdered(soldProduct)) {
-            soldProduct.setOrder(order);
-            soldProduct.setQuantity(quantity);
-            order.addProduct(soldProduct);
-            soldProductRepository.save(soldProduct);
+        if(product.getInStock() > 0) {
+            if(!order.checkIfProductIsOrdered(soldProduct)) {
+                soldProduct.setOrder(order);
+                soldProduct.setQuantity(quantity);
+                order.addProduct(soldProduct);
+                soldProductRepository.save(soldProduct);
+            }
+            else {
+                soldProduct.setQuantity(quantity);
+                order.incrementProduct(soldProduct);
+            }
+            updateProductQuantity(soldProduct);
+            orderRepository.save(order);
         }
-        else {
-            soldProduct.setQuantity(quantity);
-            order.incrementProduct(soldProduct);
-        }
-        updateProductQuantity(soldProduct);
-        orderRepository.save(order);
     }
 
     public void removeOneProduct(SoldProduct soldProduct, int quantity) {

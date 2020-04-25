@@ -1,5 +1,7 @@
 package pl.psk.salesManager.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,6 +14,7 @@ import pl.psk.salesManager.service.ProductService;
 
 @Controller
 public class ProductController {
+    private static final Logger LOGGER = LoggerFactory.getLogger("application");
     @Autowired
     private ProductService productService;
 
@@ -25,6 +28,7 @@ public class ProductController {
     public String deleteProduct(Model model, @PathVariable(name = "id") int id){
         productService.removeProduct(id);
         model.addAttribute("productsList", productService.findAllProducts());
+        LOGGER.warn("Product deleted");
         return "redirect:/products";
     }
 
@@ -38,6 +42,7 @@ public class ProductController {
     public String addProduct(@ModelAttribute Product product, Model model) {
         productService.addProductToRepository(product);
         model.addAttribute("productsList", productService.findAllProducts());
+        LOGGER.info("Product added");
         return "redirect:/products";
     }
 
@@ -51,6 +56,7 @@ public class ProductController {
     public String editProduct(Model model, @ModelAttribute Product product) {
         productService.editProduct(product);
         model.addAttribute("productsList", productService.findAllProducts());
+        LOGGER.info("Product modified");
         return "redirect:/products";
     }
 }

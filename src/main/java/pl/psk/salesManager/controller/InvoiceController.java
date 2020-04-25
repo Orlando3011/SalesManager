@@ -1,5 +1,7 @@
 package pl.psk.salesManager.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,10 +11,10 @@ import pl.psk.salesManager.service.InvoiceService;
 import pl.psk.salesManager.service.OrderService;
 
 import java.io.FileNotFoundException;
-import java.text.ParseException;
 
 @Controller
 public class InvoiceController {
+    private static final Logger LOGGER = LoggerFactory.getLogger("application");
     @Autowired
     InvoiceService invoiceService;
     @Autowired
@@ -22,6 +24,7 @@ public class InvoiceController {
     public String generateInvoice(Model model, @PathVariable("orderId") int id) throws FileNotFoundException {
         invoiceService.generateInvoice(id);
         model.addAttribute(orderService.findAllOrders());
+        LOGGER.info("Invoice generated");
         return "redirect:/orders";
     }
 }
