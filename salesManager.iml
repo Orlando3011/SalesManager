@@ -69,7 +69,7 @@
     <orderEntry type="library" name="Maven: org.hibernate.validator:hibernate-validator:6.0.18.Final" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-web:5.2.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:5.2.2.RELEASE" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.springframework.boot:spring-boot-devtools:2.2.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-devtools:2.2.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.2.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.2.2.RELEASE" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.h2database:h2:1.4.200" level="project" />

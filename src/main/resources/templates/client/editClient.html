@@ -10,46 +10,46 @@
 <div th:insert="layout/header"></div>
 <div class="container-fluid">
     <div class="panel panel-default">
-        <div class="panel-heading">Add new client</div>
+        <div class="panel-heading">Zmień dane klienta</div>
         <div class="panel-body">
             <form class='needs-validation' th:object="${client}" method="post" action="#" novalidate>
                 <div class="col-sm-10">
-                    <label for="firstName">First Name</label>
-                    <input type="text" id="firstName" name="firstName" th:field="*{firstName}" class="form-control" placeholder="John" required>
-                    <div class="invalid-feedback">Field should not be empty</div>
+                    <label for="firstName">Imię</label>
+                    <input type="text" id="firstName" name="firstName" th:field="*{firstName}" class="form-control" placeholder="Jan" required>
+                    <div class="invalid-feedback">Pole nie powinno być puste</div>
                 </div>
                 <div class="col-sm-10">
-                    <br /><label for="familyName">Family Name</label>
-                    <input type="text" id="familyName" name="familyName" th:field="*{familyName}" class="form-control" placeholder="Bean" required>
-                    <div class="invalid-feedback">Field should not be empty</div>
+                    <br /><label for="familyName">Nazwisko</label>
+                    <input type="text" id="familyName" name="familyName" th:field="*{familyName}" class="form-control" placeholder="Kowalski" required>
+                    <div class="invalid-feedback">Pole nie powinno być puste</div>
                 </div>
                 <div class="col-sm-10">
-                    <br /><label for="address">Address</label>
+                    <br /><label for="address">Adres</label>
                     <input type="text" id="address" name="address" th:field="*{address}" class="form-control" placeholder="Kielce, Sandomierska 50, Poland" required>
-                    <div class="invalid-feedback">Field should not be empty</div>
+                    <div class="invalid-feedback">Pole nie powinno być puste</div>
                 </div>
                 <div class="col-sm-10">
                     <br /><label for="email">E-Mail</label>
                     <input type="email" id="email" name="email" th:field="*{email}" class="form-control" placeholder="jbean50@gmail.com">
-                    <div class="invalid-feedback">Input proper e-mail address</div>
+                    <div class="invalid-feedback">Podaj poprawny adres e-mail</div>
                 </div>
                 <div class="col-sm-10">
-                    <br /><label for="phone">Phone</label>
+                    <br /><label for="phone">Telefon</label>
                     <input type="tel" id="phone" name="phone" th:field="*{phone}" class="form-control" placeholder="123456789">
-                    <div class="invalid-feedback">Input proper phone number</div>
+                    <div class="invalid-feedback">Podaj poprawny numer</div>
                 </div>
                 <div class="col-sm-10">
-                    <br /><label for="bankName">Bank Name</label>
+                    <br /><label for="bankName">Nazwa banku</label>
                     <input type="text" id="bankName" name="bankName" th:field="*{bankName}" class="form-control" placeholder="MBank" required>
-                    <div class="invalid-feedback">Field should not be empty</div>
+                    <div class="invalid-feedback">Pole nie powinno być puste</div>
                 </div>
                 <div class="col-sm-10">
-                    <br /><label for="bankAccountNumber">Bank account number</label>
+                    <br /><label for="bankAccountNumber">Numer konta bankowego</label>
                     <input type="number" id="bankAccountNumber" name="bankAccountNumber" th:field="*{bankAccountNumber}" class="form-control" placeholder="" required>
-                    <div class="invalid-feedback">Input proper account number</div>
+                    <div class="invalid-feedback">Podaj poprawny numer</div>
                 </div>
                 <div class="col-sm-10">
-                    <br /><button type="submit" class="btn btn-primary">Edit client data</button>
+                    <br /><button type="submit" class="btn btn-primary">Zatwierdź zmiany</button>
                 </div>
             </form>
         </div>

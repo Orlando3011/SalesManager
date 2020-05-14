@@ -10,71 +10,71 @@
 
 <div class="container-fluid">
     <div class="panel panel-default">
-        <div class="panel-heading">Owner details</div>
+        <div class="panel-heading">Edytuj dane personalne</div>
         <div class="panel-body">
             <form class='needs-validation' th:object="${owner}" method="post" action="#" novalidate>
                 <div class="col-sm-10">
-                    <label for="firstName">First name</label>
+                    <label for="firstName">Imię</label>
                     <input type="text" id="firstName" name="firstName" th:field="*{firstName}" class="form-control" placeholder="John" required>
-                    <div class="invalid-feedback">Field should not be empty</div>
+                    <div class="invalid-feedback">Pole nie powinno być puste</div>
                 </div>
 
                 <div class="col-sm-10">
-                    <br /><label for="familyName">Family name</label>
+                    <br /><label for="familyName">Nazwisko</label>
                     <input type="text" id="familyName" name="familyName" th:field="*{familyName}" class="form-control" placeholder="Bean" required>
-                    <div class="invalid-feedback">Field should not be empty</div>
+                    <div class="invalid-feedback">Pole nie powinno być puste</div>
                 </div>
 
                 <div class="col-sm-10">
-                    <br /><label for="companyName">Company</label>
+                    <br /><label for="companyName">Nazwa firmy</label>
                     <input type="text" id="companyName" name="companyName" th:field="*{companyName}" class="form-control" placeholder="Bush Inc." required>
-                    <div class="invalid-feedback">Field should not be empty</div>
+                    <div class="invalid-feedback">Pole nie powinno być puste</div>
                 </div>
 
                 <div class="col-sm-10">
-                    <br /><label for="address">Address</label>
+                    <br /><label for="address">Adres</label>
                     <input type="text" id="address" name="address" th:field="*{address}" class="form-control" placeholder="" required>
-                    <div class="invalid-feedback">Field should not be empty</div>
+                    <div class="invalid-feedback">Pole nie powinno być puste</div>
                 </div>
 
                 <div class="col-sm-10">
-                    <br /><label for="phone">Phone</label>
+                    <br /><label for="phone">Telefon</label>
                     <input type="tel" id="phone" name="phone" th:field="*{phone}" class="form-control" placeholder="123456789" required>
-                    <div class="invalid-feedback">Field should not be empty</div>
+                    <div class="invalid-feedback">Pole nie powinno być puste</div>
                 </div>
 
                 <div class="col-sm-10">
                     <br /><label for="email">E-Mail</label>
                     <input type="email" id="email" name="email" th:field="*{email}" class="form-control" placeholder="jbean12@gmail.com" required>
-                    <div class="invalid-feedback">Field should not be empty</div>
+                    <div class="invalid-feedback">Pole nie powinno być puste</div>
                 </div>
 
                 <div class="col-sm-10">
-                    <br /><label for="bankName">Bank name</label>
+                    <br /><label for="bankName">Nazwa banku</label>
                     <input type="text" id="bankName" name="bankName" th:field="*{bankName}" class="form-control" placeholder="" required>
-                    <div class="invalid-feedback">Field should not be empty</div>
+                    <div class="invalid-feedback">Pole nie powinno być puste</div>
                 </div>
 
                 <div class="col-sm-10">
-                    <br /><label for="bankNumber">Bank number</label>
+                    <br /><label for="bankNumber">Numer konta bankowego</label>
                     <input type="number" id="bankNumber" name="bankNumber" th:field="*{bankNumber}" class="form-control" placeholder="" required>
-                    <div class="invalid-feedback">Field should not be empty</div>
+                    <div class="invalid-feedback">Pole nie powinno być puste</div>
                 </div>
 
                 <div class="col-sm-10">
                     <br /><label for="nip">NIP</label>
                     <input type="number" id="nip" name="nip" th:field="*{nip}" class="form-control" placeholder="" required>
-                    <div class="invalid-feedback">Field should not be empty</div>
+                    <div class="invalid-feedback">Pole nie powinno być puste</div>
                 </div>
 
                 <div class="col-sm-10">
-                    <br /><label for="currencySymbol">Currency symbol (will be added to prices on invoices)</label>
-                    <input type="text" id="currencySymbol" name="currencySymbol" th:field="*{currencySymbol}" class="form-control" placeholder="zł" required>
-                    <div class="invalid-feedback">Field should not be empty</div>
+                    <br /><label for="currencySymbol">Symbol waluty (PLN, $...)</label>
+                    <input type="text" id="currencySymbol" name="currencySymbol" th:field="*{currencySymbol}" class="form-control" placeholder="PLN" required>
+                    <div class="invalid-feedback">Pole nie powinno być puste</div>
                 </div>
 
                 <div class="col-sm-10">
-                    <br /><button type="submit" class="btn btn-primary">Save changes</button>
+                    <br /><button type="submit" class="btn btn-primary">Zatwierdź zmiany</button>
                 </div>
             </form>
         </div>

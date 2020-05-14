@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import pl.psk.salesManager.service.InvoiceService;
 import pl.psk.salesManager.service.OrderService;
 
-import java.io.FileNotFoundException;
+import java.io.IOException;
 
 @Controller
 public class InvoiceController {
@@ -21,7 +21,7 @@ public class InvoiceController {
     OrderService orderService;
 
     @GetMapping("invoice/{orderId}")
-    public String generateInvoice(Model model, @PathVariable("orderId") int id) throws FileNotFoundException {
+    public String generateInvoice(Model model, @PathVariable("orderId") int id) throws IOException {
         invoiceService.generateInvoice(id);
         model.addAttribute(orderService.findAllOrders());
         LOGGER.info("Invoice generated");

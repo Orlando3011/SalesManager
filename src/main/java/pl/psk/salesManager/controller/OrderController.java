@@ -41,7 +41,6 @@ public class OrderController {
     @PostMapping("/addOrder")
     public String AddNewOrder(@ModelAttribute Order order, Model model) {
         orderService.addOrderToRepository(order);
-        System.out.println("Payment: " + order.getPaymentMethod());
         model.addAttribute("ordersList", orderService.findAllOrders());
         LOGGER.info("Order added");
         return "redirect:/orders";

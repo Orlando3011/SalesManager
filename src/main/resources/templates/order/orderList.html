@@ -16,34 +16,34 @@
         <thead class="thead-dark">
         <tr>
             <th scope="col"> ID </th>
-            <th scope="col"> Client </th>
-            <th scope="col"> Date </th>
-            <th scope="col"> Products bought </th>
-            <th scope="col"> Total price </th>
-            <th scope="col"> Generate invoice </th>
-            <th scope="col"> Details </th>
-            <th scope="col"> Edit </th>
-            <th scope="col"> Remove </th>
+            <th scope="col"> Klient </th>
+            <th scope="col"> Data </th>
+            <th scope="col"> Ilość kupionych produktów </th>
+            <th scope="col"> Cena w sumie </th>
+            <th scope="col"> Wygeneruj fakturę</th>
+            <th scope="col"> Szczegóły </th>
+            <th scope="col"> Edytuj </th>
+            <th scope="col"> Usuń </th>
         </tr>
         </thead>
         <tbody>
         <tr th:if="${ordersList.empty}">
-            <td colspan="2"> You do not have any orders data! </td>
+            <td colspan="2"> Brak zamówień </td>
         </tr>
         <tr th:each="order : ${ordersList}">
             <td><span th:text="${order.id}"> ID </span></td>
-            <td><span th:text="${order.clientFullName}"> Client </span></td>
-            <td><span th:text="${order.dateDisplayed}"> Date </span></td>
-            <td><span th:text="${order.productsBought}"> Products bought </span></td>
-            <td><span th:text="${order.totalPrice}"> Total price </span></td>
-            <td><a th:href="@{/invoice/{orderId}(orderId=${order.id})}" class="btn btn-secondary">Generate invoice</a></td>
-            <td><a th:href="@{/orderDetails/{id}(id=${order.id})}" class="btn btn-secondary">Details</a></td>
-            <td><a th:href="@{/editOrder/{id}(id=${order.id})}" class="btn btn-primary">Edit</a></td>
-            <td><a th:href="@{/deleteOrder/{id}(id=${order.id})}" class="btn btn-danger">Delete</a></td>
+            <td><span th:text="${order.clientFullName}"> Klient </span></td>
+            <td><span th:text="${order.dateDisplayed}"> Data </span></td>
+            <td><span th:text="${order.productsBought}"> Ilość kupionych produktów </span></td>
+            <td><span th:text="${order.totalPrice}"> Cena w sumie </span></td>
+            <td><a th:href="@{/invoice/{orderId}(orderId=${order.id})}" class="btn btn-secondary">Wygeneruj fakturę</a></td>
+            <td><a th:href="@{/orderDetails/{id}(id=${order.id})}" class="btn btn-secondary">Szczegóły</a></td>
+            <td><a th:href="@{/editOrder/{id}(id=${order.id})}" class="btn btn-primary">Edytuj</a></td>
+            <td><a th:href="@{/deleteOrder/{id}(id=${order.id})}" class="btn btn-danger">Usuń</a></td>
         </tr>
         </tbody>
     </table>
-    <a th:href="@{/addOrder}" class="btn btn-primary">Add order</a>
+    <a th:href="@{/addOrder}" class="btn btn-primary">Nowe zamówienie</a>
 
 </div>
 <div th:insert="layout/footer"></div>

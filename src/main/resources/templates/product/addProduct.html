@@ -10,41 +10,41 @@
 
 <div class="container-fluid">
     <div class="panel panel-default">
-        <div class="panel-heading">Add new product</div>
+        <div class="panel-heading">Dodaj nowy produkt</div>
         <div class="panel-body">
             <form class='needs-validation' th:object="${product}" method="post" action="#" novalidate>
                 <div class="col-sm-10">
-                    <label for="name">Name</label>
+                    <label for="name">Nazwa</label>
                     <input type="text" id="name" name="name" th:field="*{name}" class="form-control" placeholder="product name" required>
-                    <div class="invalid-feedback">Field should not be empty</div>
+                    <div class="invalid-feedback">Pole nie powinno być puste</div>
                 </div>
                 <div class="col-sm-10">
-                    <br /><label for="pkwiuSymbol">PKWiU Symbol</label>
+                    <br /><label for="pkwiuSymbol">Symbol PKWiU</label>
                     <input type="text" id="pkwiuSymbol" name="pkwiuSymbol" th:field="*{pkwiuSymbol}" class="form-control" placeholder="pkwiuSymbol" required>
-                    <div class="invalid-feedback">Field should not be empty</div>
+                    <div class="invalid-feedback">Pole nie powinno być puste</div>
                 </div>
                 <div class="col-sm-10">
-                    <br /><label for="price">Price</label>
+                    <br /><label for="price">Cena</label>
                     <input type="text" id="price" name="price" th:field="*{price}" class="form-control" placeholder="19.99" required>
-                    <div class="invalid-feedback">Field should not be empty</div>
+                    <div class="invalid-feedback">Pole nie powinno być puste</div>
                 </div>
                 <div class="col-sm-10">
-                    <br /><label for="tax">Tax</label>
+                    <br /><label for="tax">Stopa podatku</label>
                     <input type="text" id="tax" name="tax" th:field="*{tax}" class="form-control" placeholder="0.23" required>
-                    <div class="invalid-feedback">Field should not be empty</div>
+                    <div class="invalid-feedback">Pole nie powinno być puste</div>
                 </div>
                 <div class="col-sm-10">
-                    <br /><label for="inStock">Quantity</label>
+                    <br /><label for="inStock">Ilość</label>
                     <input type="number" id="inStock" name="inStock" th:field="*{inStock}" class="form-control" placeholder="6" required>
-                    <div class="invalid-feedback">Input proper number</div>
+                    <div class="invalid-feedback">Podaj poprawną liczbę</div>
                 </div>
                 <div class="col-sm-10">
-                    <br /><label for="imageSource">Image URL</label>
+                    <br /><label for="imageSource">Źródło zdjęcia</label>
                     <input type="url" id="imageSource" name="imageSource" th:field="*{imageSource}" class="form-control" placeholder="Image URL">
-                    <div class="invalid-feedback">Input proper URL link</div>
+                    <div class="invalid-feedback">Podaj porawny link URL</div>
                 </div>
                 <div class="col-sm-10">
-                    <br /><button type="submit" class="btn btn-primary">Add product</button>
+                    <br /><button type="submit" class="btn btn-primary">Dodaj produkt</button>
                 </div>
             </form>
         </div>

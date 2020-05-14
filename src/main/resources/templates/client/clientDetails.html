@@ -11,23 +11,23 @@
 
 <div class="container-fluid">
     <div class="panel panel-default">
-        <div class="panel-heading">Client details</div>
+        <div class="panel-heading">Szczegółowe dane klienta</div>
         <div class="panel-body">
             <form th:object="${client}">
                 <div class="form-group row">
-                    <label for="firstName" class="col-sm-2 col-form-label">First Name</label>
+                    <label for="firstName" class="col-sm-2 col-form-label">Imię</label>
                     <div class="col-sm-10">
                         <input class="form-control-plaintext" id="firstName" name="firstName" th:field="*{firstName}" readonly>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="familyName" class="col-sm-2 col-form-label">Family Name</label>
+                    <label for="familyName" class="col-sm-2 col-form-label">Nazwisko</label>
                     <div class="col-sm-10">
                         <input class="form-control-plaintext" id="familyName" name="familyName" th:field="*{familyName}" readonly>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="address" class="col-sm-2 col-form-label">Address</label>
+                    <label for="address" class="col-sm-2 col-form-label">Adres</label>
                     <div class="col-sm-10">
                         <input class="form-control-plaintext" id="address" name="address" th:field="*{address}" readonly>
                     </div>
@@ -39,26 +39,26 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="email" class="col-sm-2 col-form-label">Phone</label>
+                    <label for="email" class="col-sm-2 col-form-label">Telefon</label>
                     <div class="col-sm-10">
                         <input class="form-control-plaintext" id="phone" name="phone" th:field="*{phone}" readonly>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="bankName" class="col-sm-2 col-form-label">Bank Name</label>
+                    <label for="bankName" class="col-sm-2 col-form-label">Nazwa banku</label>
                     <div class="col-sm-10">
                         <input class="form-control-plaintext" id="bankName" name="bankName" th:field="*{bankName}" readonly>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="bankAccountNumber" class="col-sm-2 col-form-label">Bank account number</label>
+                    <label for="bankAccountNumber" class="col-sm-2 col-form-label">Nimer konta bankowego</label>
                     <div class="col-sm-10">
                         <input class="form-control-plaintext" id="bankAccountNumber" name="bankAccountNumber" th:field="*{bankAccountNumber}" readonly>
                     </div>
                 </div>
             </form>
-            <a th:href="@{/editClient/{id}(id=${client.id})}" class="btn btn-primary">Edit</a>
-            <a th:href="@{/deleteClient/{id}(id=${client.id})}" class="btn btn-danger">Delete</a>
+            <a th:href="@{/editClient/{id}(id=${client.id})}" class="btn btn-primary">Edytuj</a>
+            <a th:href="@{/deleteClient/{id}(id=${client.id})}" class="btn btn-danger">Usuń</a>
         </div>
     </div>
 </div>

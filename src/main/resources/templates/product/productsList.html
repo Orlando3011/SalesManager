@@ -15,34 +15,34 @@
         <thead class="thead-dark">
         <tr>
             <th scope="col"> ID </th>
-            <th scope="col"> Name </th>
-            <th scope="col"> PKwiU Symbol </th>
-            <th scope="col"> In stock </th>
-            <th scope="col"> Price </th>
-            <th scope="col"> Tax </th>
-            <th scope="col"> Image </th>
-            <th scope="col"> Edit </th>
-            <th scope="col"> Remove </th>
+            <th scope="col"> Nazwa </th>
+            <th scope="col"> Symbol PKwiU </th>
+            <th scope="col"> Dostępne </th>
+            <th scope="col"> Cena </th>
+            <th scope="col"> Stopa podatku </th>
+            <th scope="col"> Zdjęcie </th>
+            <th scope="col"> Edytuj </th>
+            <th scope="col"> Usuń </th>
         </tr>
         </thead>
         <tbody>
         <tr th:if="${productsList.empty}">
-            <td colspan="2"> You do not have any products data! </td>
+            <td colspan="2"> Brak zapisanych produktów </td>
         </tr>
         <tr th:each="product : ${productsList}">
             <td><span th:text="${product.id}"> ID </span></td>
-            <td><span th:text="${product.name}"> Name </span></td>
-            <td><span th:text="${product.pkwiuSymbol}"> PKwiU Symbol </span></td>
-            <td><span th:text="${product.inStock}"> In stock </span></td>
-            <td><span th:text="${product.price}"> Price </span></td>
-            <td><span th:text="${product.tax}"> Tax </span></td>
+            <td><span th:text="${product.name}"> Nazwa </span></td>
+            <td><span th:text="${product.pkwiuSymbol}"> Symbol PKwiU </span></td>
+            <td><span th:text="${product.inStock}"> Dostępne </span></td>
+            <td><span th:text="${product.price}"> Cena </span></td>
+            <td><span th:text="${product.tax}"> Stopa podatku </span></td>
             <td><img th:src="${product.imageSource}" class="img-fluid img-thumbnail" alt="Product image" width="50" height="50"></td>
-            <td><a th:href="@{/editProduct/{id}(id=${product.id})}" class="btn btn-primary">Edit</a></td>
-            <td><a th:href="@{/deleteProduct/{id}(id=${product.id})}" class="btn btn-danger">Delete</a></td>
+            <td><a th:href="@{/editProduct/{id}(id=${product.id})}" class="btn btn-primary">Edytuj</a></td>
+            <td><a th:href="@{/deleteProduct/{id}(id=${product.id})}" class="btn btn-danger">Usuń</a></td>
         </tr>
         </tbody>
     </table>
-    <a th:href="@{/addProduct}" class="btn btn-primary">Add product</a>
+    <a th:href="@{/addProduct}" class="btn btn-primary">Dodaj produkt</a>
 
 </div>
 <div th:insert="layout/footer"></div>
