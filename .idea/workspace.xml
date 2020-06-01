@@ -1,34 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="1c50e363-cf65-41b2-8670-bf3da7030519" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/logs/archived/app.2020-04-25.0.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/archived/app.2020-05-09.0.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/config/SecurityConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/wrapper.plantuml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/salesManager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/salesManager.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/controller/InvoiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/controller/InvoiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/controller/ClientsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/controller/ClientsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/model/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/service/InvoiceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/service/InvoiceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/client/addClient.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/client/addClient.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/client/clientDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/client/clientDetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/client/clientsList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/client/clientsList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/client/editClient.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/client/editClient.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/psk/salesManager/service/OrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/order/addOrder.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/order/addOrder.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/order/editOrder.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/order/editOrder.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/order/orderDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/order/orderDetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/order/orderList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/order/orderList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/owner/editOwner.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/owner/editOwner.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/owner/ownerDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/owner/ownerDetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product/addProduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/product/addProduct.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product/editProduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/product/editProduct.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product/productsList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/product/productsList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/psk/salesManager/model/ProductTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/psk/salesManager/model/ProductTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,15 +40,20 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="HTML File" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="InvalidFacetManager">
+    <ignored-facets>
+      <facet id="salesManager/invalid/JPA" />
+    </ignored-facets>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -68,14 +75,22 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../IT/PatternsGenerator" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.37471265" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -165,6 +180,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SalesManagerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="salesManager" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="pl.psk.salesManager.SalesManagerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.SalesManagerApplication" />
@@ -185,6 +207,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578139805445</updated>
+      <workItem from="1590002648222" duration="1146000" />
+      <workItem from="1590047029145" duration="37000" />
+      <workItem from="1590047083911" duration="6206000" />
+      <workItem from="1590134821169" duration="92000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1578139949503</created>
@@ -354,8 +380,18 @@
       <option name="project" value="LOCAL" />
       <updated>1587835507577</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Translated text to polish, added trasfer details in invoice">
+      <created>1589447099137</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1589447099137</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -395,7 +431,8 @@
     <MESSAGE value="Added invoice generation" />
     <MESSAGE value="Tweaks for invoice generation and model" />
     <MESSAGE value="Added security and loggers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added security and loggers" />
+    <MESSAGE value="Translated text to polish, added trasfer details in invoice" />
+    <option name="LAST_COMMIT_MESSAGE" value="Translated text to polish, added trasfer details in invoice" />
   </component>
   <component name="WindowStateProjectService">
     <state x="543" y="216" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582464373922">
@@ -418,46 +455,50 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="566" y="271" width="403" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1586000067013" />
-    <state x="334" y="0" key="CommitChangelistDialog2" timestamp="1587835506773">
+    <state x="334" y="0" key="CommitChangelistDialog2" timestamp="1589447098134">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="334" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587835506773" />
-    <state width="1493" height="288" key="GridCell.Tab.0.bottom" timestamp="1589446942361">
+    <state x="334" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589447098134" />
+    <state x="549" y="138" key="FileChooserDialogImpl" timestamp="1590050695227">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589446942361" />
-    <state width="1493" height="288" key="GridCell.Tab.0.center" timestamp="1589446942361">
+    <state x="549" y="138" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590050695227" />
+    <state width="1493" height="288" key="GridCell.Tab.0.bottom" timestamp="1590173349233">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589446942361" />
-    <state width="1493" height="288" key="GridCell.Tab.0.left" timestamp="1589446942361">
+    <state width="1493" height="288" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590173349233" />
+    <state width="1493" height="288" key="GridCell.Tab.0.center" timestamp="1590173349232">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589446942361" />
-    <state width="1493" height="288" key="GridCell.Tab.0.right" timestamp="1589446942361">
+    <state width="1493" height="288" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590173349232" />
+    <state width="1493" height="288" key="GridCell.Tab.0.left" timestamp="1590173349232">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="288" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589446942361" />
+    <state width="1493" height="288" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590173349232" />
+    <state width="1493" height="288" key="GridCell.Tab.0.right" timestamp="1590173349232">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590173349232" />
     <state x="299" y="67" key="Maven.ArtifactSearchDialog" timestamp="1587832472985">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="299" y="67" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1587832472985" />
-    <state x="277" y="0" key="SettingsEditor" timestamp="1589442492377">
+    <state x="277" y="0" key="SettingsEditor" timestamp="1590169807202">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589442492377" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1587835550809">
+    <state x="277" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1590169807202" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1589447105144">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587835550809" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589447105144" />
     <state x="344" y="74" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587828407827">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="344" y="74" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1587828407827" />
-    <state x="540" y="131" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1581177810583">
+    <state x="540" y="138" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1590231344700">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="540" y="131" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1581177810583" />
+    <state x="540" y="138" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1590231344700" />
     <state x="462" y="144" width="611" height="536" key="find.popup" timestamp="1587828884511">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

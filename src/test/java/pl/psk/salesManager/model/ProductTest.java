@@ -16,5 +16,4 @@ class ProductTest {
         //then
         assertTrue(product.getIsAvailable());
     }
-
 }

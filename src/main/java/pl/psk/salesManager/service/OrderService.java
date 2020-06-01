@@ -11,7 +11,6 @@ import pl.psk.salesManager.repository.SoldProductRepository;
 
 import java.text.DateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Service
@@ -38,7 +37,6 @@ public class OrderService {
         orderRepository.save(order);
 
         DateFormat df = DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT);
-        Date date = order.getCreated();
         order.setDateDisplayed(df.format(order.getCreated()));
         orderRepository.save(order);
     }

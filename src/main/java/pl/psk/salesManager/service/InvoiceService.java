@@ -1,6 +1,5 @@
 package pl.psk.salesManager.service;
 
-import com.itextpdf.io.font.FontConstants;
 import com.itextpdf.io.font.FontProgram;
 import com.itextpdf.io.font.FontProgramFactory;
 import com.itextpdf.kernel.color.Color;
@@ -22,7 +21,6 @@ import pl.psk.salesManager.model.Order;
 import pl.psk.salesManager.model.Owner;
 import pl.psk.salesManager.model.SoldProduct;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
@@ -53,11 +51,9 @@ public class InvoiceService {
         if(order.getPaymentMethod().equals("Przelew bankowy")) addTransferData(invoice, owner);
         addSignaturePlace(invoice, pdfDoc.getDefaultPageSize());
         invoice.close();
-
-
     }
 
-    public void addTitle(Document invoice, int id) {
+    private void addTitle(Document invoice, int id) {
         Paragraph invoiceTitle = new Paragraph("Faktura VAT");
         invoiceTitle.setBackgroundColor(Color.LIGHT_GRAY);
         invoiceTitle.setFontSize(28);

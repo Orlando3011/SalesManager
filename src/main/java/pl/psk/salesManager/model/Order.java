@@ -5,6 +5,8 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Date;
 import java.util.List;
 
@@ -149,6 +151,9 @@ public class Order {
         productsOrdered.add(soldProduct);
         productsBought = productsBought + soldProduct.getQuantity();
         totalPrice = totalPrice + soldProduct.getProduct().getPrice() * soldProduct.getQuantity();
+        totalPrice = BigDecimal.valueOf(totalPrice)
+                .setScale(2, RoundingMode.HALF_UP)
+                .doubleValue();
     }
 
     public void incrementProduct(SoldProduct soldProduct) {
